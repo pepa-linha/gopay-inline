@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace Contributte\GopayInline\Api\Lists;
 
@@ -6,53 +6,53 @@ class SwiftCode
 {
 
 	// cz
-	const AIR_BANK = 'AIRACZPP';
-	const CESKA_SPORITELNA = 'GIBACZPX';
-	const CSOB = 'CEKOCZPP';
-	const EQUA_BANK = 'EQBKCZPP';
-	const ERA = 'CEKOCZPP-ERA';
-	const EXPO_BANK = 'EXPNCZPP';
-	const FIO_BANKA = 'FIOBCZPP';
-	const HELLO_BANK = 'BPPFCZP1';
-	const ING_BANK = 'INGBCZPP';
-	const KOMERCNI_BANKA = 'KOMBCZPP';
-	const MBANK = 'BREXCZPP';
-	const MONETA_MONEY_BANK = 'AGBACZPP';
-	const OBER_BANK = 'OBKLCZ2X';
-	const RAIFFEISENBANK = 'RZBCCZPP';
-	const SBER_BANK = 'VBOECZ2X';
-	const UNICREDIT_BANK_CZ = 'BACXCZPP';
+	public const AIR_BANK = 'AIRACZPP';
+	public const CESKA_SPORITELNA = 'GIBACZPX';
+	public const CSOB = 'CEKOCZPP';
+	public const EQUA_BANK = 'EQBKCZPP';
+	public const ERA = 'CEKOCZPP-ERA';
+	public const EXPO_BANK = 'EXPNCZPP';
+	public const FIO_BANKA = 'FIOBCZPP';
+	public const HELLO_BANK = 'BPPFCZP1';
+	public const ING_BANK = 'INGBCZPP';
+	public const KOMERCNI_BANKA = 'KOMBCZPP';
+	public const MBANK = 'BREXCZPP';
+	public const MONETA_MONEY_BANK = 'AGBACZPP';
+	public const OBER_BANK = 'OBKLCZ2X';
+	public const RAIFFEISENBANK = 'RZBCCZPP';
+	public const SBER_BANK = 'VBOECZ2X';
+	public const UNICREDIT_BANK_CZ = 'BACXCZPP';
 
 	// sk
-	const BKS_BANK = 'BFKKSKBB';
-	const CITI_BANK_SK = 'CITISKBA';
-	const CSOB_SK = 'CEKOSKBX';
-	const FIO_BANKA_SK = 'FIOZSKBA';
-	const ING_BANK_SK = 'INGBSKBX';
-	const JT_BANKA_SK = 'JTBPSKBA';
-	const MBANK_SK = 'BREXSKBX';
-	const OBER_BANK_SK = 'OBKLSKBA';
-	const OTP_BANKA = 'OTPVSKBX';
-	const POSTOVA_BANKA = 'POBNSKBA';
-	const PRIMA_BANKA = 'KOMASK2X';
-	const PRIVAT_BANKA = 'BSLOSK22';
-	const SLOVENSKA_SPORITELNA = 'GIBASKBX';
-	const TATRA_BANKA = 'TATRSKBX';
-	const UNICREDIT_BANK_SK = 'UNCRSKBX';
-	const VUB_BANK = 'SUBACZPP';
+	public const BKS_BANK = 'BFKKSKBB';
+	public const CITI_BANK_SK = 'CITISKBA';
+	public const CSOB_SK = 'CEKOSKBX';
+	public const FIO_BANKA_SK = 'FIOZSKBA';
+	public const ING_BANK_SK = 'INGBSKBX';
+	public const JT_BANKA_SK = 'JTBPSKBA';
+	public const MBANK_SK = 'BREXSKBX';
+	public const OBER_BANK_SK = 'OBKLSKBA';
+	public const OTP_BANKA = 'OTPVSKBX';
+	public const POSTOVA_BANKA = 'POBNSKBA';
+	public const PRIMA_BANKA = 'KOMASK2X';
+	public const PRIVAT_BANKA = 'BSLOSK22';
+	public const SLOVENSKA_SPORITELNA = 'GIBASKBX';
+	public const TATRA_BANKA = 'TATRSKBX';
+	public const UNICREDIT_BANK_SK = 'UNCRSKBX';
+	public const VUB_BANK = 'SUBACZPP';
 
 	/**
-	 * @return array
+	 * @return string[]
 	 */
-	public static function all()
+	public static function all(): array
 	{
 		return array_merge(self::cz(), self::sk());
 	}
 
 	/**
-	 * @return array
+	 * @return string[]
 	 */
-	public static function cz()
+	public static function cz(): array
 	{
 		return [
 			self::AIR_BANK,
@@ -75,9 +75,9 @@ class SwiftCode
 	}
 
 	/**
-	 * @return array
+	 * @return string[]
 	 */
-	public static function sk()
+	public static function sk(): array
 	{
 		return [
 			self::BKS_BANK,

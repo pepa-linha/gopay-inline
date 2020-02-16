@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /**
  * Test: Api\Lists\SwiftCode
@@ -10,16 +10,16 @@ use Tester\Assert;
 require __DIR__ . '/../../../../bootstrap.php';
 
 // All
-test(function () {
+test(function (): void {
 	Assert::count(32, SwiftCode::all());
 });
 
 // CZ
-test(function () {
+test(function (): void {
 	Assert::count(16, SwiftCode::cz());
 });
 
 // SK
-test(function () {
+test(function (): void {
 	Assert::count(16, SwiftCode::sk());
 });
