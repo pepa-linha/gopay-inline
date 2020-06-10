@@ -7,11 +7,11 @@ final class Money
 
 	/**
 	 * @param float $amout
-	 * @return float
+	 * @return int
 	 */
 	public static function toCents($amout)
 	{
-		return round($amout * 100);
+		return (int) ((string) round($amout * 100));
 	}
 
 }
