@@ -113,7 +113,9 @@ class PaymentFactory
 		$payment->setAmount($data['amount']);
 		$payment->setCurrency($data['currency']);
 		$payment->setOrderNumber($data['order_number']);
-		$payment->setOrderDescription($data['order_description']);
+		if (!empty($data['order_description'])) {
+			$payment->setOrderDescription($data['order_description']);
+		} 
 		$payment->setReturnUrl($data['return_url']);
 		$payment->setNotifyUrl($data['notify_url']);
 
