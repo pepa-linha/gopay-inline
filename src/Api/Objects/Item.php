@@ -10,7 +10,7 @@ class Item extends AbstractObject
 	/** @var string */
 	public $name;
 
-	/** @var float */
+	/** @var int */
 	public $amount;
 
 	/** @var int */
@@ -31,7 +31,7 @@ class Item extends AbstractObject
 	}
 
 	/**
-	 * @return float
+	 * @return int
 	 */
 	public function getAmount()
 	{
@@ -44,14 +44,6 @@ class Item extends AbstractObject
 	public function getCount()
 	{
 		return $this->count;
-	}
-
-	/**
-	 * @return float
-	 */
-	public function getAmountInCents()
-	{
-		return Money::toCents($this->getAmount());
 	}
 
 	/**
@@ -80,7 +72,7 @@ class Item extends AbstractObject
 	}
 
 	/**
-	 * @param float $amount
+	 * @param int $amount
 	 * @return void
 	 */
 	public function setAmount($amount)
@@ -126,7 +118,7 @@ class Item extends AbstractObject
 	{
 		$data = [];
 		$data['name'] = $this->getName();
-		$data['amount'] = $this->getAmountInCents();
+		$data['amount'] = $this->getAmount();
 		$data['count'] = $this->getCount();
 
 		// NOT REQUIRED ====================================

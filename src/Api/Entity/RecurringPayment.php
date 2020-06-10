@@ -16,7 +16,7 @@ class RecurringPayment extends Payment
 	{
 		$data = [];
 
-		$data['amount'] = $this->getAmountInCents();
+		$data['amount'] = $this->getAmount();
 		$data['currency'] = $this->getCurrency();
 
 		$data['order_number'] = $this->getOrderNumber();

@@ -32,19 +32,6 @@ test(function () {
 
 	$payment->setAmount(100);
 	Assert::equal(100, $payment->getAmount());
-	Assert::equal(floatval(10000), $payment->getAmountInCents());
-
-	$payment->setAmount(100.5);
-	Assert::equal(100.5, $payment->getAmount());
-	Assert::equal(floatval(10050), $payment->getAmountInCents());
-
-	$payment->setAmount(100.555);
-	Assert::equal(100.555, $payment->getAmount());
-	Assert::equal(floatval(10056), $payment->getAmountInCents());
-
-	$payment->setAmount(100.54);
-	Assert::equal(100.54, $payment->getAmount());
-	Assert::equal(floatval(10054), $payment->getAmountInCents());
 });
 
 // Items

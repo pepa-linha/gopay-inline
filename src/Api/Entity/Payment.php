@@ -18,7 +18,7 @@ class Payment extends AbstractEntity
 	/** @var Target */
 	protected $target;
 
-	/** @var float */
+	/** @var int */
 	protected $amount;
 
 	/** @var string */
@@ -86,7 +86,7 @@ class Payment extends AbstractEntity
 	}
 
 	/**
-	 * @return float
+	 * @return int
 	 */
 	public function getAmount()
 	{
@@ -94,15 +94,7 @@ class Payment extends AbstractEntity
 	}
 
 	/**
-	 * @return float
-	 */
-	public function getAmountInCents()
-	{
-		return Money::toCents($this->getAmount());
-	}
-
-	/**
-	 * @param float $amount
+	 * @param int $amount
 	 * @return void
 	 */
 	public function setAmount($amount)
@@ -343,7 +335,7 @@ class Payment extends AbstractEntity
 
 		$data['target'] = $this->target->toArray();
 
-		$data['amount'] = $this->getAmountInCents();
+		$data['amount'] = $this->getAmount();
 		$data['currency'] = $this->getCurrency();
 
 		$data['order_number'] = $this->getOrderNumber();
