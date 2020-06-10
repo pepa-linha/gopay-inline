@@ -24,16 +24,14 @@ class PaymentFactory
 		'amount',
 		'currency',
 		'order_number',
-		'order_description',
 		'items',
-		'return_url',
-		'notify_url',
+		'callback',
 	];
 
 	/** @var array */
 	public static $optional = [
-		'target',
 		'payer',
+		'order_description',
 		'additional_params',
 		'lang',
 		'eet',
